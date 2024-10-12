@@ -174,23 +174,6 @@ export default async function Page({ params }) {
               <p className="pt-5 font-body text-lg leading-8 text-secondary sm:leading-9 md:text-xl md:leading-9 lg:leading-9 xl:leading-9">
                 {post.author.about}
               </p>
-              <div className="flex items-center justify-center pt-5 md:justify-start">
-                <a href="/">
-                  <i className="bx bxl-facebook-square text-2xl text-primary hover:text-yellow"></i>
-                </a>
-                <a href="/" className="pl-4">
-                  <i className="bx bxl-twitter text-2xl text-primary hover:text-yellow"></i>
-                </a>
-                <a href="/" className="pl-4">
-                  <i className="bx bxl-dribbble text-2xl text-primary hover:text-yellow"></i>
-                </a>
-                <a href="/" className="pl-4">
-                  <i className="bx bxl-linkedin text-2xl text-primary hover:text-yellow"></i>
-                </a>
-                <a href="/" className="pl-4">
-                  <i className="bx bxl-instagram text-2xl text-primary hover:text-yellow"></i>
-                </a>
-              </div>
             </div>
           </div>
         </div>

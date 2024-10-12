@@ -1,7 +1,5 @@
 "use client";
 import { useState } from "react";
-import FormData from "form-data";
-import Mailgun from "mailgun.js";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -14,29 +12,20 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // send email
-    const mailgun = new Mailgun(FormData);
-    const mg = mailgun.client({
-      username: "api",
-      key: process.env.MAILGUN_API_KEY,
+    const response = await fetch("/api/sendmailgunemail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(contactData),
     });
-    const emailHtml = `name: ${contactData.name}, email: ${contactData.email}, message: ${contactData.message}`;
-    mg.messages
-      .create(process.env.MAILGUN_URL, {
-        from: `Excited User <mailgun@${process.env.MAILGUN_URL}>`,
-        to: [contactData.email],
-        subject: "Contact form submitted",
-        text: "Testing some Mailgun awesomeness!",
-        html: emailHtml,
-      })
-      .then((msg) => {
-        console.log(msg.message);
-        toast.success("Form has been submitted!");
-      }) // logs response data
-      .catch((err) => {
-        console.log(err);
-        toast.error("Some error occured!");
-      }); // logs any error
+
+    const res = await response.json();
+    if (res.status == "success") {
+      toast.success("Form has been submitted!");
+    } else {
+      toast.error("Some error occured!");
+    }
   };
 
   const handleChange = (e) => {
