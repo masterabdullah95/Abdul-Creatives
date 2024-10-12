@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
           content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
 
-        <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+        <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
 
         <meta name="theme-color" content="#5540af" />
 
