@@ -4,6 +4,8 @@ import FormData from "form-data";
 export async function POST(req) {
   const body = await req.json();
 
+  console.log("MAILGUN_API_KEY: ", process.env.MAILGUN_API_KEY);
+  console.log("MAILGUN_URL: ", process.env.MAILGUN_URL);
   const mailgun = new Mailgun(FormData);
   const mg = mailgun.client({
     username: "api",
