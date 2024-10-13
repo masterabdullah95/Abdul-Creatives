@@ -26,6 +26,11 @@ const ContactForm = () => {
     } else {
       toast.error("Some error occured!");
     }
+    setContactData({
+      name: "",
+      email: "",
+      message: "",
+    });
   };
 
   const handleChange = (e) => {
