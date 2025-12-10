@@ -699,7 +699,7 @@ export default async function Home() {
                         finally switched myself to a full time freelancer in Jan
                         2019 and till now i am working as a fulltime web
                         developer. I worked with many international clients and
-                        companies and completed 290+ orders with 239+
+                        companies and completed 327 orders with 255+
                         <span className="block">
                           {" "}
                           <Image
@@ -782,7 +782,7 @@ export default async function Home() {
                         have 100% Job Success Score on Upwork, i am still
                         working as a fulltime web developer on upwork. I worked
                         with many international clients and companies and
-                        completed 50+ jobs, 800+ hours worked with 40+
+                        completed 50+ jobs, 1040+ hours worked with 40+
                         <span className="block">
                           {" "}
                           <Image
